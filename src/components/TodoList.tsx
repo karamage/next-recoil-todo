@@ -1,7 +1,9 @@
 import React from 'react'
 import { useTodos } from '../uses/useTodos'
 
-const TodoList = () => {
+type Props = void
+
+const TodoList: React.FC<Props> = () => {
   const {todos} = useTodos()
   return (
     <div>

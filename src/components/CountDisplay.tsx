@@ -1,7 +1,9 @@
 import React from 'react'
 import { useCounter } from '../uses/useCounter'
 
-const CountDisplay = () => {
+type Props = void
+
+const CountDisplay: React.FC<Props> = () => {
   const { counter } = useCounter()
   return (
   <div>{ counter.count }</div>
