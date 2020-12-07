@@ -1,7 +1,13 @@
 import { useRecoilState } from 'recoil'
-import { counterState } from '../atoms/counter'
+import { counterState, CounterState } from '../atoms/counter'
 
-export const useCounter = () => {
+type CounterStore = {
+  counter: CounterState
+  increment: () => void
+  decrement: () => void
+}
+
+export const useCounter = (): CounterStore => {
   const [counter, setCounter] = useRecoilState(counterState)
   const increment = () => {
     setCounter((state) => ({ count: state.count + 1}))
