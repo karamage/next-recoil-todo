@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { AppProps } from 'next/app'
 import '../../styles/globals.css'
 
 import { RecoilRoot } from 'recoil'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <RecoilRoot>
       <Component {...pageProps} />
