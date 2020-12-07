@@ -1,11 +1,12 @@
+import React from 'react'
 import { useTodos } from '../uses/useTodos'
 
 const TodoList = () => {
   const {todos} = useTodos()
   return (
     <div>
-      {todos.todos.map((todo) => {
-        return <li>{todo.title}</li>;
+      {todos.todos.map((todo, i) => {
+        return <li key={i}>{todo.title}</li>
       })}
     </div>
   )
