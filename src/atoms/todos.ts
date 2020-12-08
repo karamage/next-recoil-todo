@@ -12,7 +12,6 @@ const initialState: TodosState = {
   todos: []
 }
 
-console.log('test')
 export const todosState = atom({
   key: 'todos',
   default: initialState
