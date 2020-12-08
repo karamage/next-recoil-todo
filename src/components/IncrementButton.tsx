@@ -1,8 +1,7 @@
 import React from 'react'
 import { useCounter } from '../uses/useCounter'
 
-type Props = void
-const IncrementButton: React.FC<Props> = () => {
+const IncrementButton: React.FC = () => {
   const { increment } = useCounter()
   return (
     <button onClick={() => increment()}>increment</button>

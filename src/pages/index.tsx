@@ -8,10 +8,13 @@ import IncrementButton from '../components/IncrementButton'
 import DecrementButton from '../components/DecrementButton'
 */
 
+import TodoList from '../components/TodoList'
+
 export default function Home(): JSX.Element {
   return (
     <div>
       <div>Todo App</div>
+      <TodoList/>
     </div>
   )
 }
