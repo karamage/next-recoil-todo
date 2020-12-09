@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTodos } from '../uses/useTodos'
 
 const TodoForm: React.FC = () => {
-  const {_, addTodo} = useTodos()
+  const {addTodo} = useTodos()
   const [title, setTitle] = useState('')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value)
