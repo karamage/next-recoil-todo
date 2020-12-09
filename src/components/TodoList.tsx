@@ -6,7 +6,7 @@ const TodoList: React.FC = () => {
   return (
     <div>
       {todos.todos.map((todo, i) => {
-        return <li key={i}>{todo.title}</li>
+        return <li key={i}>{todo.title} {todo.desc}</li>
       })}
     </div>
   )
