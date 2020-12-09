@@ -9,12 +9,14 @@ import DecrementButton from '../components/DecrementButton'
 */
 
 import TodoList from '../components/TodoList'
+import TodoForm from '../components/TodoForm'
 
 export default function Home(): JSX.Element {
   return (
     <div>
       <div>Todo App</div>
-      <TodoList/>
+      <TodoList />
+      <TodoForm />
     </div>
   )
 }
