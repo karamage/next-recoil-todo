@@ -1,12 +1,7 @@
 import React from 'react'
 
-/*
-import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
-import CountDisplay from '../components/CountDisplay'
-import IncrementButton from '../components/IncrementButton'
-import DecrementButton from '../components/DecrementButton'
-*/
+// import Head from 'next/head'
+// import styles from '../../styles/Home.module.css'
 
 import TodoList from '../components/TodoList'
 import TodoForm from '../components/TodoForm'

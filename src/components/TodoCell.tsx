@@ -12,8 +12,15 @@ const TodoCell: React.FC<Props> = (props: Props) => {
   const tapDelete = (index: number) => {
     deleteTodo(index)
   }
+  const tapEdit = (index: number) => {
+    // TODO 編集ページに移動する
+  }
   return (
-    <li>{props.todo.title} {props.todo.desc} <button onClick={() => tapDelete(props.index)}>削除</button></li>
+    <li>
+      <span>{props.todo.title} {props.todo.desc}</span>
+      <button onClick={() => tapEdit(props.index)}>編集</button>
+      <button onClick={() => tapDelete(props.index)}>削除</button>
+    </li>
   )
 }
 
