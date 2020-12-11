@@ -1,4 +1,6 @@
 import React from 'react'
+import Router from 'next/router'
+import { useRouter } from 'next/router'
 import { TodoState } from '../atoms/todos'
 import { useTodos } from '../uses/useTodos'
 
@@ -8,12 +10,17 @@ type Props = {
 }
 
 const TodoCell: React.FC<Props> = (props: Props) => {
+  const router = useRouter()
   const {deleteTodo} = useTodos()
   const tapDelete = (index: number) => {
     deleteTodo(index)
   }
   const tapEdit = (index: number) => {
-    // TODO 編集ページに移動する
+    // 編集ページに移動する
+    router.push({
+      pathname:'/edit',
+      query: { index }
+    })
   }
   return (
     <li>
