@@ -4,13 +4,13 @@ import TodoCell from './TodoCell'
 
 const TodoList: React.FC = () => {
   const {todos} = useTodos()
-return (
-    <div>
-      {todos.todos.map((todo, i) => {
-        return <TodoCell key={i} todo={todo} index={i} />
-      })}
-    </div>
-  )
+  return (
+      <div>
+        {todos.todos.map((todo, i) => {
+          return <TodoCell key={i} todo={todo} index={i} />
+        })}
+      </div>
+    )
 }
 
 export default TodoList
