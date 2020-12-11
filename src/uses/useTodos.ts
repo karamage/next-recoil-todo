@@ -4,6 +4,7 @@ import { todosState, TodoState, TodosState } from '../atoms/todos'
 type TodosStore = {
   todos: TodosState
   addTodo: (title: string, desc: string) => void
+  deleteTodo: (index: number) => void
 }
 
 export const useTodos = (): TodosStore => {
@@ -16,8 +17,18 @@ export const useTodos = (): TodosStore => {
       return { todos: newTodos }
     })
   }
+
+  const deleteTodo = (index: number) => {
+    setTodos((state) => {
+      const deleteTodos = ([].concat(state.todos))
+      deleteTodos.splice(index, 1)
+      return { todos: deleteTodos }
+    })
+  }
+
   return {
     todos,
-    addTodo
+    addTodo,
+    deleteTodo
   }
 }
