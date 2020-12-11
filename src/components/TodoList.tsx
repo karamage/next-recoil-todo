@@ -1,15 +1,18 @@
 import React from 'react'
 import { useTodos } from '../uses/useTodos'
+import TodoCell from './TodoCell'
 
 const TodoList: React.FC = () => {
-  const {todos, deleteTodo} = useTodos()
+  const {todos} = useTodos()
+  /*
   const tapDelete = (index: number) => {
     deleteTodo(index)
   }
+  */
   return (
     <div>
       {todos.todos.map((todo, i) => {
-        return <li key={i}>{todo.title} {todo.desc} <button onClick={() => tapDelete(i)}>削除</button></li>
+        return <TodoCell key={i} todo={todo} index={i} />
       })}
     </div>
   )
