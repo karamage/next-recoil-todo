@@ -33,8 +33,12 @@ const TodoForm: React.FC = () => {
       <div className="border mt-1 flex rounded-md shadow-sm">
         <input type="text" value={desc} onChange={handleDescChange} />
       </div>
-      <button onClick={tapAdd}>追加</button>
-      <button onClick={clearInput}>クリア</button>
+      <span className="m-0.5">
+        <button className="btn-blue" onClick={tapAdd}>追加</button>
+      </span>
+      <span className="m-0.5">
+        <button className="btn-blue" onClick={clearInput}>クリア</button>
+      </span>
     </div>
   )
 }
