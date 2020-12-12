@@ -21,8 +21,18 @@ const TodoForm: React.FC = () => {
   }
   return (
     <div>
-      <input type="text" value={title} onChange={handleChange} />
-      <input type="text" value={desc} onChange={handleDescChange} />
+      <label htmlFor="title_input" className="block text-sm font-medium text-gray-700">
+        Title
+      </label>
+      <div className="border mt-1 flex rounded-md shadow-sm">
+        <input type="text" className="form-text-input" value={title} onChange={handleChange} />
+      </div>
+      <label htmlFor="desc_input" className="block text-sm font-medium text-gray-700">
+        Description
+      </label>
+      <div className="border mt-1 flex rounded-md shadow-sm">
+        <input type="text" value={desc} onChange={handleDescChange} />
+      </div>
       <button onClick={tapAdd}>追加</button>
       <button onClick={clearInput}>クリア</button>
     </div>
