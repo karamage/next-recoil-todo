@@ -4,6 +4,7 @@ import { todosState, TodoState, TodosState } from '../atoms/todos'
 type TodosStore = {
   todos: TodosState
   addTodo: (title: string, desc: string) => void
+  updateTodo: (index: number, title: string, desc: string) => void
   deleteTodo: (index: number) => void
 }
 
@@ -18,6 +19,15 @@ export const useTodos = (): TodosStore => {
     })
   }
 
+  const updateTodo = (index: number, title: string, desc: string) =>  {
+    const todo: TodoState = { title, desc }
+    setTodos((state) => {
+      const updateTodos = ([].concat(state.todos))
+      updateTodos[index] = todo
+      return { todos: updateTodos }
+    })
+  }
+
   const deleteTodo = (index: number) => {
     setTodos((state) => {
       const deleteTodos = ([].concat(state.todos))
@@ -29,6 +39,7 @@ export const useTodos = (): TodosStore => {
   return {
     todos,
     addTodo,
+    updateTodo,
     deleteTodo
   }
 }
