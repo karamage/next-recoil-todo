@@ -25,8 +25,12 @@ const TodoCell: React.FC<Props> = (props: Props) => {
   return (
     <li>
       <span>{props.todo.title} {props.todo.desc}</span>
-      <button onClick={() => tapEdit(props.index)}>編集</button>
-      <button onClick={() => tapDelete(props.index)}>削除</button>
+      <span className="m-0.5">
+        <button className="btn-blue" onClick={() => tapEdit(props.index)}>編集</button>
+      </span>
+      <span className="m-0.5">
+        <button className="btn-blue" onClick={() => tapDelete(props.index)}>削除</button>
+      </span>
     </li>
   )
 }
